@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TaskItem extends StatelessWidget {
+  final String title;
+  final String description;
+
+  TaskItem({this.title, this.description});
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -10,8 +15,8 @@ class TaskItem extends StatelessWidget {
           value: 'off',
           onChanged: (v) {},
         ),
-        title: Text('Submit cheque to accountant'),
-        subtitle: Text('Due yesterday'),
+        title: Text(title),
+        subtitle: Text(description),
       ),
     );
   }
