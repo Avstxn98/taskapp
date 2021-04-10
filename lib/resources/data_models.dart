@@ -46,6 +46,6 @@ class Task {
   });
 
   static Task fromJson(dynamic json) {
-    return Task(title: json['title'], description: json['description']);
+    return Task(title: json['title'], description: json['description'],deadline: DateTime.parse(json['deadline'],createdAt: DateTime.parse(json['created_at']) ) );
   }
 }
